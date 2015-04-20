@@ -51,7 +51,7 @@
             return GetByIncomingRequest(Request);
         }
 
-        // Don't compress far future, for JPG files and similar
+        // No compression and far future expiration, for JPG files and similar
         [OutputCache(Duration = 31536000, Location = OutputCacheLocation.Any, VaryByParam = P)]
         public HttpWebResponseResult CacheFarFuture()
         {
@@ -66,7 +66,7 @@
         }
 
         // Root page
-        [OutputCache(Duration = 10, Location = OutputCacheLocation.Any, VaryByParam = P, VaryByHeader = H)]
+        [OutputCache(Duration = 2, Location = OutputCacheLocation.Any, VaryByParam = P, VaryByHeader = H)]
         public ActionResult Index()
         {
             return View();

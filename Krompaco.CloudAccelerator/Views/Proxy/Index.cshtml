@@ -2,7 +2,9 @@
     ViewBag.Title = Request.Url.Host;
 }
 
+<h2>Examples</h2>
+
 <ul>
-	<li><a href="/k.nu/gui/i/krompaco.png">/k.nu/gui/i/krompaco.png</a></li>
-	<li><a href="/k.nu/files/samples/cd-catalog.xml">/k.nu/files/samples/cd-catalog.xml</a></li>
+	<li><a href="/k.nu/gui/i/krompaco.png">/k.nu/gui/i/krompaco.png</a> - Fetched and outputted with no compression and far future expiry</li>
+	<li><a href="/k.nu/files/samples/cd-catalog.xml">/k.nu/files/samples/cd-catalog.xml</a> - Compresses if compression is supported by client and caches</li>
 </ul>
