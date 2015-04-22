@@ -3,7 +3,7 @@ ASP.NET MVC Web Application that can be cloud hosted and act as a Reverse Proxy 
 
 ## Features
 * A very simple application that fetches, caches and serves web content from the remote domain names you allow.
-* Enforces optimal compression if the client supports it and doesn't skip compressing under load as IIS does by default.
+* Decompresses if necessary and enforces optimal compression if the client supports it and doesn't skip compressing under load as IIS does by default.
 * Any cookies are stripped so Response is cookie free.
 * Deploy it as an Azure Web Site and scale to what is needed.
 
