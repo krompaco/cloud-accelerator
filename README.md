@@ -1,5 +1,5 @@
 # Cloud Accelerator
-ASP.NET MVC Web Application that can be cloud hosted and act as a Reverse Proxy Cache.
+ASP.NET MVC Web Application that can be cloud hosted and act as a caching Reverse Proxy.
 
 ## Features
 * A very simple application that fetches, caches and serves web content from the remote domain names you allow.
