@@ -13,9 +13,13 @@
 
     public class ProxyController : Controller
     {
+        // Vary by Content-Encoding to support clients with different decompression support
         private const string H = "Content-Encoding";
+
+        // TODO: It could be wise to vary by the known parameters for certain routes, for example if your javascripts add a cachebuster parameter
         private const string P = "*";
 
+        // TODO: Adjust Duration and wheter to CompressContent
         [CompressContent]
         [OutputCache(Duration = 60, Location = OutputCacheLocation.Any, VaryByParam = P, VaryByHeader = H)]
         public HttpWebResponseResult CacheSpan5()
@@ -51,14 +55,14 @@
             return GetByIncomingRequest(Request);
         }
 
-        // No compression and far future expiration, for JPG files and similar
+        // No compression and far future expiration, for image files
         [OutputCache(Duration = 31536000, Location = OutputCacheLocation.Any, VaryByParam = P)]
         public HttpWebResponseResult CacheFarFuture()
         {
             return GetByIncomingRequest(Request);
         }
 
-        // Anything but index / root page
+        // Anything but index / root page, defaults to no compression
         [OutputCache(Duration = 30, Location = OutputCacheLocation.Any, VaryByParam = P, VaryByHeader = H)]
         public HttpWebResponseResult Default()
         {
