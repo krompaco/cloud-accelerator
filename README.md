@@ -13,3 +13,6 @@ Grab the source code and Run the app, browse the root and look at the example UR
 1. In \App_Start\RouteConfig.cs - Add patterns and point to wanted proxy controller
 2. In \Controllers\ProxyController.cs - Add the domain names you allow to fetch from and adjust duration and parameters
 3. Possibly edit \Views\Proxy\Index.cshtml
+
+## Backlog
+* Option to persist origin files in some kind of Azure storage.
