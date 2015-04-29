@@ -19,7 +19,7 @@
         // TODO: It could be wise to vary by the known parameters for certain routes, for example if your javascripts add a cachebuster parameter
         private const string P = "*";
 
-        // TODO: Adjust Duration and wheter to CompressContent
+        // TODO: Adjust Duration and whether to CompressContent
         [CompressContent]
         [OutputCache(Duration = 60, Location = OutputCacheLocation.Any, VaryByParam = P, VaryByHeader = H)]
         public HttpWebResponseResult CacheSpan5()
